@@ -1,0 +1,15 @@
+Algoritma
+firstToken
+if(endToken) then 
+	output("Ekspresi Kosong")
+else 
+	repeat 
+	if(!IsOperator) then 
+		push(s,currentToken) 
+	else 
+		pop(s,op2)
+		pop(s,op1)
+		push(s,evaluate(op1,op2,operator)
+	nextToken
+	until (endToken)
+	output(top(s))

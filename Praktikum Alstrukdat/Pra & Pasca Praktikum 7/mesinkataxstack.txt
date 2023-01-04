@@ -1,0 +1,40 @@
+Stack S;
+CreateEmpty(&S);
+int val2, val1 , Hasil;
+
+startkata()
+
+if (Endkata)
+{
+printf("ekspresi Kosong");
+}
+else
+{
+ while (!EndKata)
+ {
+  if (!isOperator(currentword.Tab[0]))
+  {
+   for (int i = 0 ; i < currentword.length ; i++)
+   {
+    integer = integer*10 + (currentword.Tab[i] - '0');
+   }
+   Push(&S , integer);
+   printf("%d", InfoTop(S));
+  }
+
+  else
+  { 
+   Pop(&S, &val2);
+   Pop(&S, &val1);
+   Hasil = eval(val1 , val2 , Currentword.Tab[0]);
+   Push(&S , Hasil);
+   printf("%d %c %d", val1 , Currentword.Tab[0] , val2);
+  }
+
+ ADVKATA();
+  
+ }
+ printf("Hasil=%d", InfoTop(s));
+}
+
+return 0;
